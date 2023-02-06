@@ -1,0 +1,97 @@
+body{
+    background-color: hsl(216, 12%, 8%);
+    font-family: 'Outfit', sans-serif;
+    margin:0px;
+}
+
+#rating-area{
+    width:300px;
+    background-color: hsl(213, 19%, 18%);
+    padding:30px;
+    border-radius: 20px;
+    margin:300px auto;
+}
+
+
+#rating-area h2{
+    color:hsl(0, 0%, 100%);
+}
+
+#rating-area p{
+    color:hsl(217, 12%, 63%);
+}
+
+#rating-area #reviews button{
+    border-radius: 100%;
+    width:45px;
+    height:45px;
+    border:0px;
+    font-weight: bold;
+    background-color: hsl(212, 15%, 24%);
+    color:hsl(217, 12%, 63%);
+}
+
+#rating-area #reviews button.selected{
+    background-color: hsl(217, 12%, 63%) !important;
+    color: white !important;
+}
+
+#rating-area #reviews button:hover{
+    background-color: hsl(25, 97%, 53%);
+    color:white;
+    cursor:pointer;
+}
+#rating-area #star{
+    width:30px;
+    height:30px;
+    padding-top:15px;
+    padding-left:15px;
+    border-radius: 100%;
+    border:0px;
+    background-color: hsl(212, 15%, 24%);
+    font-weight: bold;
+    color:hsl(217, 12%, 63%);
+}
+
+#rating-area .submit-button{
+    background-color: hsl(25, 97%, 53%);
+    color:white;
+    border:0px;
+    width:100%;
+    margin-top:20px;
+    padding:13px 0;
+    border-radius:20px;
+    letter-spacing: 3px;
+}
+
+#rating-area .submit-button:hover{
+    color: hsl(25, 97%, 53%);
+    background-color:white;
+    cursor:pointer
+}
+
+
+#thank-you-area{
+    width:300px;
+    background-color: hsl(213, 19%, 18%);
+    padding:30px;
+    border-radius: 20px;
+    margin:300px auto;
+    text-align: center;
+}
+
+#thank-you-area .show-review-area{
+    color: hsl(25, 97%, 53%);
+    background-color: hsl(212, 15%, 24%);
+    padding:10px 20px;
+    border-radius: 20px;
+}
+
+#thank-you-area h2{
+    color:white;
+}
+
+
+#thank-you-area p{
+    color:hsl(217, 12%, 63%);
+}

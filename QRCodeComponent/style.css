@@ -1,0 +1,31 @@
+body {
+  background-color: hsl(212, 45%, 89%);
+  margin: 0px;
+}
+
+.code-area {
+  margin: 150px auto;
+  background-color: hsl(0, 0%, 100%);
+  width: 300px;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.code-area img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.code-area h1 {
+  color: hsl(218, 44%, 22%);
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+}
+
+.code-area p {
+  color: hsl(210, 2%, 60%);
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+}
