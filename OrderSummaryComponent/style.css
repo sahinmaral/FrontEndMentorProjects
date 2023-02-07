@@ -3,6 +3,7 @@ body {
   background: url("./images/pattern-background-desktop.svg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y:-450px;
   background-color: hsl(225, 100%, 94%);
   margin:0px;
 }
@@ -21,6 +22,7 @@ body {
 
 #order-summary .description p {
   font-size: 16px;
+  padding:0 25px;
   color: hsl(224, 23%, 55%);
 }
 
@@ -40,7 +42,7 @@ body {
   background-color: hsl(230, 23%, 95%);
   border-radius: 10px;
   width: 360px;
-  margin: 20px auto;
+  margin: 20px auto 30px auto;
   padding: 20px;
 }
 
