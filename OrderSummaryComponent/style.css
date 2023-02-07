@@ -1,0 +1,154 @@
+body {
+  font-family: "Red Hat Display", sans-serif;
+  background: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: hsl(225, 100%, 94%);
+  margin:0px;
+}
+
+#order-summary {
+  background-color: hsl(225, 100%, 98%);
+  text-align: center;
+  width: 450px;
+  border-radius: 20px;
+  margin: 100px auto;
+}
+
+#order-summary .thumbnail img {
+  border-radius: 20px 20px 0 0;
+}
+
+#order-summary .description p {
+  font-size: 16px;
+  color: hsl(224, 23%, 55%);
+}
+
+#order-summary .title,
+.description,
+.button-area {
+  padding: 0px 25px;
+}
+
+#order-summary .title h1 {
+  font-weight: 900;
+  margin-top: 30px;
+}
+
+#order-summary .price-plan {
+  display: flex;
+  background-color: hsl(230, 23%, 95%);
+  border-radius: 10px;
+  width: 360px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+#order-summary .price-plan .description {
+  padding-left: 20px;
+}
+
+#order-summary .price-plan .description .title {
+  color:hsl(223, 47%, 23%);
+  font-weight: 900;
+  font-size:18px;
+  padding-bottom:3px;
+}
+
+#order-summary .price-plan .description p {
+  margin: 0px;
+  padding:0px;
+  font-size:18px;
+}
+
+#order-summary .price-plan a {
+  margin-top: 15px;
+  margin-left:auto;
+  color:hsl(223, 47%, 23%);
+  font-weight: bold;
+  transition: color 300ms ease-in;
+}
+
+#order-summary .price-plan a:hover{
+    color:hsl(224, 23%, 55%);
+}
+
+#order-summary .button-area {
+  display: flex;
+  flex-direction: column;
+}
+
+#order-summary .button-area button {
+  padding: 17px 0;
+  border: 0px;
+  font-weight: 900;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 5px 0px;
+}
+
+#proceed-payment-button {
+  background-color: hsl(245, 75%, 52%);
+  color: white;
+  -webkit-box-shadow: 0px 10px 10px -7px rgba(56, 41, 224, 1);
+  -moz-box-shadow: 0px 10px 10px -7px rgba(56, 41, 224, 1);
+  box-shadow: 0px 10px 10px -7px rgba(56, 41, 224, 1);
+  transition: background-color 300ms ease-in;
+}
+
+#proceed-payment-button:hover {
+  background-color: hsl(224, 23%, 55%);
+  -webkit-box-shadow: 0px 10px 10px -7px rgba(45, 53, 72, 1);
+  -moz-box-shadow: 0px 10px 10px -7px rgba(45, 53, 72, 1);
+  box-shadow: 0px 10px 10px -7px rgba(45, 53, 72, 1);
+}
+
+#cancel-order-button {
+  color: hsl(224, 23%, 55%);
+  background-color: hsl(225, 100%, 98%);
+  transition: color 300ms ease-in;
+}
+
+#cancel-order-button:hover {
+  color: hsl(223, 47%, 23%);
+}
+
+@media screen and (max-width: 425px) {
+  body {
+    background: hsl(225, 100%, 94%);
+  }
+
+  #order-summary {
+    width:350px;
+  }
+
+  #order-summary .thumbnail img{
+    width:350px;
+  }
+
+  #order-summary .title h1{
+    font-size:25px;
+  }
+
+  #order-summary .price-plan{
+    width:260px;
+  }
+
+  #order-summary .price-plan .description{
+    padding-left:15px;
+    padding-right: 0px;
+  }
+
+  #order-summary .price-plan .description .title{
+    font-size:16px;
+    padding-bottom:3px;
+  }
+
+  #order-summary .price-plan .description p{
+    font-size:16px;
+  }
+
+  #order-summary .price-plan a {
+    margin-top: 13px;
+  }
+}
