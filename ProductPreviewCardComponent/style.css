@@ -1,0 +1,103 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: hsl(30, 38%, 92%);
+}
+
+.card{
+    width:650px;
+    height:530px;
+    margin:150px auto;
+    font-family: 'Montserrat', serif;
+    display:flex;
+}
+
+.card .banner-image{
+    width:400px;
+    border-radius: 10px 0 0 10px;
+}
+
+.card .description{
+    border-radius: 0 10px 10px 0;
+    padding-top:20px;
+    padding-left:30px;
+    padding-right:40px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.card .description h3, .card .description p, .card .description .price-old{
+    color:hsl(228, 12%, 48%);
+}
+
+.card .description h3{
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.card .description p{
+    line-height: 25px;
+    font-size:14px;
+}
+
+.card .description .price{
+    color:hsl(158, 36%, 37%);
+    font-weight: 700;
+    font-size:35px;
+}
+
+.card .description button{
+    background-color:hsl(158, 36%, 37%);
+    width: 100%;
+    border:0px;
+    font-size:14px;
+    font-weight: 700;
+    border-radius: 10px;
+    margin-top:30px;
+    display: flex;
+    justify-content: center;
+}
+
+.card .description button:hover{
+    background-color: hsl(212, 21%, 14%);
+    cursor: pointer;
+}
+
+.card .description button p{
+    color:hsl(0, 0%, 100%);
+}
+
+.card .description button img{
+    margin-right:10px;
+    margin-top:17px;
+}
+
+.card .description h1, .card .description .price{
+    font-family: 'Fraunces', serif;
+}
+
+.card .description .price-old{
+   margin-left:20px;
+   font-size:13px;
+   margin-top:13px;
+}
+
+@media screen and (max-width:650px) {
+    .card{
+        width:350px;
+        margin:50px auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+     .card .banner-image{
+        background: url('./images/image-product-mobile.jpg');
+        width:350px;
+        height:350px;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card .description{
+        border-radius: 0 0 20px 20px;
+        padding-bottom:30px;
+    }
+}
