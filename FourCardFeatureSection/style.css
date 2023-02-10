@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+/*#region header-description */
+
+.header-description {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.header-description p,
+.header-description h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.header-description p:nth-of-type(1) {
+  font-size: 2em;
+  color: hsl(229, 6%, 66%);
+  font-weight: 200;
+}
+
+.header-description p:nth-of-type(2) {
+  font-size: 18px;
+  width: 600px;
+  margin: 20px auto;
+  color: hsl(229, 6%, 66%);
+}
+
+/*#endregion */
+
+.card {
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 0.34);
+  box-shadow: 0px 0px 30px -14px rgba(0, 0, 0, 0.34);
+  height: 230px;
+  position: relative;
+}
+
+.coloured-border {
+  border-radius: 50px 50px 0 0;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.card p,
+h2 {
+  padding-left: 25px;
+}
+
+.card h2 {
+  padding-top: 10px;
+}
+
+.card p {
+  color: hsl(229, 6%, 66%);
+  padding-right: 100px;
+  position: relative;
+  font-size: 14px;
+}
+
+.card img {
+  position: absolute;
+  z-index: -1;
+  bottom: 20px;
+  right: 20px;
+}
+
+@media screen and (max-width: 1170px) {
+
+  .header-description p:nth-of-type(2) {
+    width:350px;
+  }
+
+  .card-group {
+   display:block !important;
+   margin:0 !important;
+  }
+
+  .card-group2{
+    margin:0 !important;
+  }
+
+  .card-group .card {
+    margin: 20px 50px !important;
+    width: auto !important;
+  }
+}

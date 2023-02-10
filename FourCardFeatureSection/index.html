@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Four card feature section</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header-description">
+      <p>Reliable, efficient delivery</p>
+      <h1>Powered by Technology</h1>
+      <p>
+        Our Artificial Intelligence powered tools use millions of project data
+        points to ensure that your project is successful
+      </p>
+    </div>
+
+    <div
+      style="display: flex; flex-direction: row; margin: 0 150px"
+      class="card-group"
+    >
+      <div class="card" style="flex: 1; margin-top: 150px; margin-right: 25px">
+        <div
+          class="coloured-border"
+          style="border-color: hsl(180, 62%, 55%)"
+        ></div>
+        <h2>Supervisor</h2>
+        <p>Monitors activity to identify project roadblocks</p>
+        <img src="./images/icon-supervisor.svg" alt="supervisor-pic" />
+        <div style="clear: right"></div>
+      </div>
+
+      <div style="display: flex; flex: 1; flex-direction: column" class="card-group2">
+        <div class="card" style="margin-bottom: 15px">
+          <div
+            class="coloured-border"
+            style="border-color: hsl(0, 78%, 62%)"
+          ></div>
+          <h2>Team Builder</h2>
+          <p>
+            Scans our talent network to create the optimal team for your project
+          </p>
+          <img src="./images/icon-team-builder.svg" alt="teambuilder-pic" />
+          <div style="clear: right"></div>
+        </div>
+
+        <div class="card" style="margin-top: 15px">
+          <div
+            class="coloured-border"
+            style="border-color: hsl(34, 97%, 64%)"
+          ></div>
+          <h2>Karma</h2>
+          <p>Regularly evaluates our talent to ensure quality</p>
+          <img src="./images/icon-karma.svg" alt="karma-pic" />
+          <div style="clear: right"></div>
+        </div>
+      </div>
+
+      <div class="card" style="flex: 1; margin-top: 150px; margin-left: 25px">
+        <div
+          class="coloured-border"
+          style="border-color: hsl(212, 86%, 64%)"
+        ></div>
+        <h2>Calculator</h2>
+        <p>Uses data from past projects to provide better delivery estimates</p>
+        <img src="./images/icon-calculator.svg" alt="calculator-pic" />
+        <div style="clear: right"></div>
+      </div>
+    </div>
+  </body>
+</html>
