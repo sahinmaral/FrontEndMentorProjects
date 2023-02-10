@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(217, 54%, 11%);
+  font-family: "Outfit", sans-serif;
+}
+
+.card {
+  width: 300px;
+  margin: 200px auto;
+  background-color: hsl(216, 50%, 16%);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.card .banner-img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card .banner-img:hover{
+    opacity:0.2;
+    cursor: pointer;
+}
+
+.card .banner-img-view {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(0, 255, 247, 0.5);
+  border-radius: 10px;
+  margin-top:-304px;
+  background-image: url('./images/icon-view.svg');
+  background-repeat: no-repeat;
+  background-position: 130px;
+}
+
+.card .title {
+  color: hsl(0, 0%, 100%);
+  font-weight: 600;
+}
+
+.card .description {
+  color: hsl(215, 51%, 70%);
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.card .price-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.card .price-description img {
+  width: 20px;
+  height: 20px;
+}
+
+.card .price-description p {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 10px;
+}
+
+.card .price-description div {
+  display: flex;
+  flex-direction: row;
+}
+
+.card .line {
+  margin: 20px 0;
+  border: 1px solid hsl(215, 32%, 27%);
+}
+
+.card .creator {
+  display: flex;
+  flex-direction: row;
+}
+
+.card .creator img {
+  width: 35px;
+  height: 35px;
+  border: 1px solid hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.card .creator p {
+  margin-top: 7px;
+  margin-bottom: 0;
+  margin-left: 20px;
+  color: hsl(215, 51%, 70%);
+}
+
+.card .creator .creator-name {
+  color: hsl(0, 0%, 100%);
+  margin-top: 7px;
+  margin-bottom: 0;
+  margin-left: 7px;
+  padding: 0;
+}
+
+.card .title:hover,
+.card .creator .creator-name:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
