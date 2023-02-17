@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="description">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </div>
+      <div class="form-area">
+        <div id="discount-area"><span><b>Try it free 7 days</b> then $20/mo. thereafter</span></div>
+        <form id="trial-form" novalidate>
+          <input type="text" placeholder="First Name" id="first-name" />
+          <p id="first-name-validation"></p>
+
+          <input type="text" placeholder="Last Name" id="last-name"/>
+          <p id="last-name-validation"></p>
+
+          <input type="email" placeholder="Email Address" id="email-address"/>
+          <p id="email-validation"></p>
+
+          <input type="password" placeholder="Password" id="password"/>
+          <p id="password-validation"></p>
+
+          <input type="submit" value="CLAIM YOUR FREE TRIAL" onclick="handleSubmit"/>
+          <p id="terms-services">
+            By clicking the button, you are agreeing to our <b style="color:hsl(0, 100%, 74%) ">Terms and Services</b>
+          </p>
+        </form>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
