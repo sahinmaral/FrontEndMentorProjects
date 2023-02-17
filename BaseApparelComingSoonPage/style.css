@@ -1,0 +1,168 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-image: url("./images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  height: 800px;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right-side img:last-child{
+    display: none;
+}
+
+.left-side {
+  padding: 80px 0 0 170px;
+}
+
+.left-side .logo-desktop{
+  margin-bottom: 110px;
+}
+
+.logo-mobile{
+    display: none;
+}
+
+.left-side h1 {
+  text-transform: uppercase;
+  font-size: 4em;
+  margin: 0;
+  letter-spacing: 20px;
+  opacity: 0.7;
+}
+
+.left-side p {
+  font-size: 16px;
+  color: hsl(0, 36%, 70%);
+  padding-right: 11rem;
+  line-height: 1.5em;
+  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+}
+
+#notification-form input {
+  padding: 1.4em 100px 0.9em 2.5em;
+  width: 330px;
+  border-radius: 5em;
+  border: 1px solid rgb(206, 151, 151, 0.5);
+  font-family: "Josefin Sans", sans-serif !important;
+  font-size: medium;
+  background:linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 75%;
+}
+
+#notification-form input.invalid{
+    border:2px solid hsl(0, 93%, 68%);
+}
+
+#notification-form input:focus {
+  outline: none !important;
+  border: 1px solid rgb(206, 151, 151, 0.5);
+}
+
+#notification-form input::placeholder {
+  color: hsl(0, 36%, 70%);
+  opacity: 0.5;
+  font-size: medium;
+}
+
+
+#notification-form button {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border: 0;
+  height: 4em;
+  padding: 1.1em 3.2em 1.1em 3.2em;
+  border-radius: 4em;
+  margin-left: -85px;
+}
+
+#notification-form button:hover {
+  cursor: pointer;
+  background: hsl(359, 79%, 89%);
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+#email-address-validation{
+    margin:0;
+    padding: 1em 0 0 3em;
+    font-size:0.9em !important;
+    color:hsl(0, 93%, 68%);
+}
+
+@media screen and (max-width:375px) {
+    body{
+        background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+        height: auto;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .logo-desktop{
+        display: none;
+    }
+
+    .logo-mobile{
+        display: block;
+        margin:30px 0 30px 30px;
+    }
+
+    .right-side img:last-child{
+        display: block;
+    }
+
+    .right-side img:first-child{
+        display: none;
+    }
+
+    .left-side {
+        padding:50px 0 50px 0;
+    }
+
+    .left-side h1{
+        font-size:40px;
+        text-align: center;
+        letter-spacing: 15px;
+    }
+
+    .left-side .header{
+        padding:30px 0 10px 0;
+    }
+
+    .left-side p {
+        padding: 30px;
+        font-size:13px;
+        text-align: center;
+    }
+
+    #notification-form{
+        text-align: center;
+    }
+
+    #notification-form input {
+        padding: 1.4em 4rem 0.9em 2.5em;
+        width: 170px;
+    }
+
+    #notification-form button{
+        margin-left:-50px;
+        padding: 1.1em 2em 1.1em 2em;
+    }
+
+    #email-address-validation{
+        padding: 1em 2.7em 0 0em;
+    }
+}
