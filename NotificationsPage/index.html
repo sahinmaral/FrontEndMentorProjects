@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <title>Frontend Mentor | Notifications page</title>
+  </head>
+  <body>
+    <div class="notifications">
+      <div class="notification-header">
+        <div class="left-side">
+          <h2>Notifications</h2>
+          <p class="notification-count"></p>
+        </div>
+        <div class="right-side">
+          <p class="mark-all-read" onclick="markAsRead()">Mark all as read</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js" />
+  </body>
+</html>

@@ -1,0 +1,178 @@
+* {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+body {
+  margin: 0;
+  background-color: hsl(228, 71%, 99%);
+  display: flex;
+  justify-content: center;
+}
+
+.notifications {
+  background-color: hsl(0, 0%, 100%);
+  margin-top: 20px;
+  border-radius: 15px;
+  padding: 20px 40px 10px 40px;
+  width: 680px;
+  margin-bottom: 50px;
+}
+
+/*#region Notification Header */
+
+.notifications > .notification-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.notifications > .notification-header > .left-side {
+  display: flex;
+}
+
+.notifications > .notification-header > .left-side > h2 {
+  margin-right: 10px;
+  margin-top: 18px;
+  font-size: 20px;
+}
+
+.notifications > .notification-header > .right-side > .mark-all-read {
+  color: hsl(219, 12%, 42%);
+}
+
+.notifications > .notification-header > .right-side > .mark-all-read:hover {
+  color: hsl(219, 85%, 26%);
+  cursor: pointer;
+}
+
+.notifications > .notification-header > .left-side > .notification-count {
+  background-color: hsl(219, 85%, 26%);
+  border-radius: 5px;
+  width: 30px;
+  height: 25px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  padding-top: 3px;
+}
+
+/*#endregion */
+
+.notifications > .notification-card {
+  font-size: 14px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 20px 20px 10px 20px;
+  margin: 10px 0;
+  color: hsl(219, 12%, 42%);
+}
+
+.notifications > .notification-card.unread {
+  background-color: hsl(206, 64%, 98%);
+}
+
+.notifications > .notification-card .username {
+  color: black;
+  font-weight: 900;
+  margin-right: 5px;
+}
+
+.notifications > .notification-card .username:hover{
+  cursor:pointer;
+  color:hsl(219, 85%, 26%);
+}
+
+.notifications > .notification-card .post-name {
+  color: hsl(219, 12%, 42%);
+  font-weight: bold;
+}
+
+.notifications > .notification-card .group-name {
+  color: hsl(219, 85%, 26%);
+  font-weight: bold;
+}
+
+.notifications > .notification-card .group-name:hover {
+  cursor:pointer;
+}
+
+.notifications
+> .notification-card
+> .first-row
+> .notification-thumbnail {
+  padding-right: 15px;
+}
+
+.notifications
+> .notification-card
+> .first-row
+> .notification-thumbnail img{
+  width:40px;
+  height:40px;
+}
+
+.notifications
+> .notification-card
+> .first-row-image img{
+  width: 40px;
+  height: 40px;
+}
+
+.notifications
+> .notification-card.liked-comment{
+  display: flex;
+  justify-content: space-between;
+}
+
+.notifications
+> .notification-card
+> .first-row {
+  display: flex;
+}
+
+.notifications
+  > .notification-card
+  > .first-row
+  > .notification-body
+  > .notification-information
+  > .unread-message {
+  background-color: hsl(1, 90%, 64%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 6px;
+  margin-left: 7px;
+  display: inline-block;
+}
+
+.notifications
+> .notification-card
+> .first-row
+> .notification-body
+> .notification-timeline {
+  color: hsl(219, 14%, 63%);
+  margin-top: 5px;
+}
+
+.notifications
+> .notification-card
+> .second-row
+> .notification-message {
+  border: 1px solid hsl(211, 68%, 94%);
+  border-radius: 5px;
+  padding: 20px 10px 20px 20px;
+  color: hsl(219, 12%, 42%);
+  margin-left:50px;
+}
+
+.notifications
+> .notification-card
+> .second-row
+> .notification-message:hover{
+  cursor: pointer;
+  background-color: hsl(210, 62%, 94%);
+}
+
+@media screen and (max-width:500px){
+  .notifications {
+    padding: 20px 20px 10px 20px;
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "username": "Mark Webber",
+    "thumbnail_image":"avatar-mark-webber.webp",
+    "createdAt": "1m ago",
+    "notification_type": "REACT_POST",
+    "action_detail": "My first tournament today!",
+    "isUnread": true
+  },
+  {
+    "username": "Angela Gray",
+    "thumbnail_image": "avatar-angela-gray.webp",
+    "createdAt": "5m ago",
+    "notification_type": "FOLLOW",
+    "isUnread": true
+  },
+  {
+    "username": "Jasob Thompson",
+    "thumbnail_image": "avatar-jacob-thompson.webp",
+    "createdAt":"1 day ago",
+    "isUnread":true,
+    "notification_type":"JOIN_GROUP",
+    "action_detail":"Chess Club"
+  },
+  {
+    "username": "Rizky Hasanuddin",
+    "thumbnail_image": "avatar-rizky-hasanuddin.webp",
+    "createdAt": "5 days ago",
+    "notification_type": "PRIVATE_MESSAGE",
+    "action_detail": "Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and I'm already having lots of fun and improving my game.",
+    "isUnread": false
+  },
+  {
+    "username": "Kimberly Smith",
+    "thumbnail_image": "avatar-kimberly-smith.webp",
+    "createdAt": "1 week ago",
+    "notification_type": "COMMENT_PICTURE",
+    "action_detail": "image-chess.webp",
+    "isUnread": false
+  },
+  {
+    "username":"Nathan Peterson",
+    "thumbnail_image":"avatar-nathan-peterson.webp",
+    "notification_type":"REACT_POST",
+    "createdAt":"2 weeks ago",
+    "action_detail":"5 end-game strategies to increase your win rate",
+    "isUnread":false
+  },
+  {
+    "username":"Anna Kim",
+    "thumbnail_image":"avatar-anna-kim.webp",
+    "createdAt":"2 weeks ago",
+    "notification_type":"LEAVE_GROUP",
+    "action_detail":"Chess Club"
+  }
+]
