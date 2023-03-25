@@ -1,5 +1,5 @@
 const fetchNotifications = () => {
-  fetch("./notifications.json")
+  fetch("./dist/js/notifications.json")
     .then((res) => {
       return res.json();
     })
@@ -50,7 +50,7 @@ const loadNotifications = (notifications) => {
     thumbnailImage.setAttribute("alt", notification.username);
 
     const thumbnailImagePath =
-      "./assets/images/" + notification.thumbnail_image;
+      "../dist/assets/images/" + notification.thumbnail_image;
     thumbnailImage.setAttribute("src", thumbnailImagePath);
     notificationThumbnail.appendChild(thumbnailImage);
 
@@ -144,7 +144,7 @@ const loadNotifications = (notifications) => {
         firstRowImage.setAttribute("alt", "commented-picture");
 
         const firstRowImagePath =
-          "./assets/images/" + notification.action_detail;
+          "../dist/assets/images/" + notification.action_detail;
         firstRowImage.setAttribute("src", firstRowImagePath);
         firstRowImageDiv.appendChild(firstRowImage);
 
