@@ -1,38 +1,496 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-color: #eef5ff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin:100px 0 0 0;
+  padding:0;
+}
+
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  right: 0;
+  width: 73%;
+  padding-left: 100px;
+}
+
+.navigation-buttons-mobile{
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  padding-top:20px;
+  padding-bottom: 20px;
+  background-color: white;
+}
+
+.navigation-buttons-mobile .next-step-button{
+  margin-right: 50px;
+}
+
+.navigation-buttons-mobile .go-back-button{
+  margin-left:50px;
+}
+
+.go-back-button {
+  text-decoration: none;
+  font-weight: bold;
+  color: hsl(231, 11%, 63%);
+}
+
+.go-back-button:hover {
+  color: hsl(213, 96%, 18%);
+}
+
+.next-step-button {
+  background-color: #052859;
+  height: 40px;
+  width: 100px;
+}
+
+.confirm-button {
+  height: 40px;
+  width: 100px;
+  background-color: hsl(243, 100%, 62%);
+}
+
+.confirm-button:hover {
+  background-color: hsl(244, 98%, 77%) !important;
+}
+
+.content {
+  max-width: 1000px;
+  height: 600px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+}
+
+.content > .left-side {
+  background: url("./images/bg-sidebar-desktop.svg");
+  background-size: cover;
+  width: 330px;
+  margin: 20px;
+  border-radius: 15px;
+  padding: 30px 20px 0 30px;
+  font-size: 15px;
+}
+
+.left-side-mobile{
+  display: none;
+}
+
+.steps {
+  display: flex;
+  margin: 30px 0;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.steps .step-circle {
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: 10px;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.steps .step-circle.current{
+  background-color: #BEE0FE;
+  color: #052750;
+}
+
+.steps .step-info p {
+  margin: 0;
+}
+
+.steps .step-info p:first-child {
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.steps .step-title {
+  font-weight: bold;
+}
+
+.content > .right-side {
+  width: 100%;
+  padding: 50px 0 0 0;
+  position: relative;
+}
+
+.page {
+  padding: 0 0 0 100px;
+}
+
+.page .page-title {
+  color: #052750;
+  margin-bottom: 0;
+}
+
+.page .page-description {
+  color: hsl(231, 11%, 63%);
+  margin-top: 20px;
+}
+
+.personal-info-page .form-group {
+  margin: 20px 0;
+}
+
+.personal-info-page .form-group .label-group {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 85px;
+}
+
+.personal-info-page .form-group .validation {
+  color: #da4b5f;
+  font-weight: bold;
+}
+
+.personal-info-page .form-group input {
+  margin-top: 10px;
+  width: 85%;
+}
+
+.plan-page .plan-options {
+  display: flex;
+  margin-top: 50px;
+}
+
+.plan-page .plan-options.mobile{
+  display: none;
+}
+
+.plan-page .plan-options .option {
+  width: 130px;
+  height: auto;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+  border: 1px solid hsl(231, 11%, 63%);
+}
+
+.plan-page .plan-options .option:hover {
+  border-color: hsl(228, 100%, 84%);
+  cursor: pointer;
+}
+
+.plan-page .plan-options .option.selected {
+  background-color: hsl(217, 100%, 97%);
+}
+
+.plan-page .plan-options .option p {
+  margin: 0;
+}
+
+.plan-page .plan-options .option .option-title {
+  font-weight: bold;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 2px;
+  font-size: 15px;
+}
+
+.plan-page .plan-options .option .option-discount{
+  color: hsl(213, 96%, 18%);
+  font-size: 13px;
+  margin-top:5px;
+}
+
+.plan-page .plan-options .option .option-price {
+  font-size: 13px;
+  color: hsl(231, 11%, 63%);
+}
+
+.plan-page .plan-options .option .option-description {
+  margin-top: 70px;
+}
+
+.plan-page .duration-select {
+  background-color: #f8f9fe;
+  margin-top: 30px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  border-radius: 10px;
+  width: auto;
+  margin-right: 80px;
+}
+
+.plan-page .duration-select label {
+  margin: 0 20px;
+  font-weight: bold;
+  color: hsl(229, 24%, 87%);
+}
+
+.plan-page .duration-select label.selected {
+  color: hsl(213, 96%, 18%);
+}
+
+.plan-page .duration-select .ant-switch-inner {
+  background-color: hsl(213, 96%, 18%);
+}
+
+.addons-page .addons-group .addon-card {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 10px;
+  width: 76%;
+  padding: 10px 20px 10px 30px;
+  margin: 15px 0;
+}
+
+.addons-page .addons-group .addon-card.selected {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(217, 100%, 97%);
+}
+
+.addons-page .addons-group .addon-card .left-side {
+  display: flex;
+}
+
+.addons-page .addons-group .addon-card .addon-check {
+  padding-top: 26px;
+  transform: scale(1.5);
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.addons-page .addons-group .addon-card p {
+  margin: 13px;
+}
+
+.addons-page .addons-group .addon-card .addon-title {
+  color: hsl(213, 96%, 18%);
+  font-weight: bold;
+}
+
+.addons-page .addons-group .addon-card .addon-info {
+  color: hsl(231, 11%, 63%);
+  font-size: 15px;
+}
+
+.addons-page .addons-group .addon-card .addon-price {
+  padding-top: 26px;
+  font-weight: bold;
+  color: hsl(228, 100%, 84%);
+}
+
+.summary-page .summary {
+  background-color: hsl(230, 75%, 98%);
+  border-radius: 10px;
+  padding: 20px;
+  width: 79%;
+}
+
+.summary-page .summary .plan {
+  display: flex;
+  justify-content: space-between;
+}
+
+.summary-page .summary .plan .left-side,
+.summary-page .summary .plan .right-side {
+  color: #052750;
+  font-weight: bold;
+}
+
+.summary-page .summary .plan .left-side a {
+  color: hsl(231, 11%, 63%);
+  text-decoration-color: hsl(231, 11%, 63%);
+}
+
+.summary-page .summary .plan .left-side a:hover {
+  color: hsl(244, 98%, 77%);
+  text-decoration-color: hsl(244, 98%, 77%);
+}
+
+.summary-page .summary .plan .right-side {
+  padding-top: 30px;
+}
+
+.summary-page .summary .addon {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.summary-page .summary .addon label,
+.summary-page .total .left-side {
+  font-size: 15px;
+  color: hsl(231, 11%, 63%);
+}
+
+.summary-page .summary .addon label:last-child {
+  font-weight: 400;
+  color: #052750;
+}
+
+.summary-page .total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  width: 79%;
+}
+
+.summary-page .total .right-side {
+  color: hsl(243, 100%, 62%);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.confirm-page {
+  padding: 130px 100px 0 100px;
+  text-align: center;
+}
+
+.confirm-page .success-icon {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.confirm-page .success-icon img {
+  width: 80px;
+  height: 80px;
+}
+
+.confirm-page .page-description{
+  line-height: 30px;
+}
+
+@media screen and (max-width:1000px) {
+
+  .page{
+    padding:0 10px 0 30px
   }
-  to {
-    transform: rotate(360deg);
+
+  .content > .left-side{
+    width: auto;
+    padding-right: 50px;
   }
+
+  .plan-page .duration-select{
+    width: 95%;
+  }
+
+  .navigation-buttons{
+    width: 90%;
+    padding-left: 30px;
+    bottom: 20px;
+  }
+
+  .addons-page .addons-group .addon-card{
+    padding: 5px 20px 5px 30px;
+  }
+
+  .addons-page .addons-group .addon-card .addon-check,.addons-page .addons-group .addon-card .addon-price {
+    padding-top:30px;
+  }
+
+  .addons-page .addons-group .addon-card{
+    width: 80%;
+  }
+
+  .summary-page .summary , .summary-page .total{
+    width: 87%;
+  }
+
+  .plan-page .plan-options .option{
+    width: 90px;
+  }
+
+  .confirm-page{
+    padding: 130px 50px 0 50px;
+  }
+
+  .personal-info-page .form-group input{
+    width: 97%;
+  }
+
+  .personal-info-page .form-group .label-group{
+    margin-right: 15px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+
+  body{
+    display: block;
+    margin:0;
+  }
+
+  .page-description{
+    margin-bottom: 50px;
+  }
+
+  .content{
+    width: 90%;
+    margin:-100px auto 0 auto;
+  }
+
+  .content > .left-side{
+    display: none;
+  }
+
+  .steps .step-info{
+    display: none;
+  }
+
+  .left-side-mobile{
+    display: flex;
+    background: url("./images/bg-sidebar-mobile.svg");
+    background-size: cover;
+    border-radius: 0;
+    width: 100%;
+    margin:0;
+    justify-content: center;
+    height: 200px;
+  }
+
+  .steps .step-circle {
+    width: 30px;
+    height: 25px;
+    padding-top:5px;
+  }
+
+  .content > .right-side{
+    padding: 20px 0 0 0;
+  }
+
+  .navigation-buttons{
+    display: none;
+  }
+
+  .plan-page .plan-options{
+    display: none;
+  }
+
+  .plan-page .plan-options.mobile{
+    display: block;
+  }
+
+  .plan-page .plan-options .option{
+    width: 90%;
+    display: flex;
+    height: 50px;
+    margin:10px 0 10px 0;
+
+  }
+
+  .plan-page .plan-options .option .option-description{
+    margin:0 0 0 30px;
+  }
+
 }
