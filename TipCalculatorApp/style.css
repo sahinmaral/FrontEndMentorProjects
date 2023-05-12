@@ -1,0 +1,154 @@
+body{
+    background-color: #c5e5e6;
+    font-family: 'Space Mono', monospace;
+    display: flex;
+    justify-content: center;
+    margin-top:200px;
+}
+
+.title{
+    color:#769898;
+}
+
+.title-group{
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    padding:0;
+}
+
+.validations{
+    margin-left:20px;
+    margin-top:20px;
+    color:#ca8a83;
+    display: none;
+}
+
+svg{
+    position:absolute;
+    top:20px;
+    left:15px;
+}
+
+.container{
+    background-color: #fefeff;
+    border-radius: 20px;
+    width:800px;
+    display: flex;
+    padding:25px;
+}
+
+.container-left{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.container-right{
+    width: 90%;
+    background-color: #01464b;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    padding:20px 20px 20px 40px;
+    position: relative;
+}
+
+.input-container{
+    position: relative;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input{
+    font-family: 'Space Mono', monospace;
+    background-color: #f3f9fa;
+    padding:10px 10px 10px 10px;
+    width:95%;
+    border:0;
+    color:#01464b;
+    text-align: end;
+    font-size:24px;
+    border-radius: 5px;
+}
+
+input:focus,input:hover{
+    outline-color:#3db6a7;
+}
+
+button{
+    border:0;
+    font-weight: 700;
+    font-family: 'Space Mono', monospace;
+    border-radius: 5px;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.buttons-bill{
+    display: grid;
+    gap:10px;
+    grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto;
+}
+
+.button-bill{
+    font-size:24px;
+    padding:5px 30px;
+    color:#fefeff;
+    background-color: #01464b;
+}
+
+.button-reset,.button-calculate{
+    font-size:20px;
+    padding:10px;
+    background-color: #3db6a7;
+    color:#01464b;
+    position: absolute;
+    width: 80%;
+}
+
+.button-calculate{
+    bottom:100px;
+}
+
+.button-reset{
+    bottom:30px;
+}
+
+.button-reset:hover{
+    background-color:#9fe8df;
+}
+
+.button-bill:hover{
+    background-color: #c2e3e3;
+    color:#01464b;
+}
+
+
+.check-table-row{
+    display: flex;
+    flex-direction: column;
+    margin-top:40px;
+    margin-right:100px;
+}
+
+.check-main-title{
+    color:#fefeff;
+}
+
+.check-alt-title{
+    color:#769898;
+}
+
+.money-total{
+    color:#3db6a7;
+    font-size:35px;
+}
