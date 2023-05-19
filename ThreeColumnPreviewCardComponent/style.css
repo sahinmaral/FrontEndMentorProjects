@@ -1,0 +1,108 @@
+body {
+  background-color: #f3f3f3;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top:150px;
+}
+
+.cars-card {
+  width: 215px;
+  padding: 50px;
+}
+
+.cars-card .title {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 35px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.cars-card .description {
+  height: 200px;
+  color: #fff;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  padding-bottom: 100px;
+  line-height: 1.7rem;
+}
+
+.cars-card .read-more{
+    border:1px solid #fff;
+    border-radius: 30px;
+    padding:15px 30px;
+    font-family: "Lexend Deca", sans-serif;
+    font-size:15px;
+}
+
+.cars-card .read-more:hover{
+    cursor: pointer;
+    color:#fff !important;
+}
+
+#sedans {
+  background-color: #e28527;
+  border-radius: 10px 0 0 10px;
+}
+
+#sedans .read-more{
+    color:#e28527;
+}
+
+#sedans .read-more:hover{
+    background-color: #e28527;
+}
+
+#suvs {
+  background-color: #016972;
+}
+
+#suvs .read-more{
+    color:#016972;
+}
+
+#suvs .read-more:hover{
+    background-color:#016972;
+}
+
+#luxury {
+  background-color: #00403f;
+  border-radius: 0 10px 10px 0;
+}
+
+#luxury .read-more{
+    color:#00403f;
+}
+
+#luxury .read-more:hover{
+    background-color:#00403f;
+}
+
+@media screen and (max-width:768px) {
+    .container{
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .cars-card{
+        width: auto;
+        height: 320px;
+    }
+
+    .cars-card .description{
+        height: 135px;
+        padding-bottom: 0px;
+    }
+
+    #sedans{
+        border-radius: 10px 10px 0 0;
+    }
+
+    #luxury{
+        border-radius: 0 0 10px 10px;
+    }
+}
