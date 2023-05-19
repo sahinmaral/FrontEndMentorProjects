@@ -5,6 +5,8 @@ const peopleAmountValidationElement = document.getElementById("people-amount-val
 const billAmountValidationElement = document.getElementById("bill-amount-validation")
 const billInputElement = document.getElementById("input-bill");
 
+let tipAmount = 0
+
 const validatePeopleInput = (event) => {
   var e = event || window.event;
   var key = e.keyCode || e.which;
@@ -40,25 +42,74 @@ const validatePeopleInput = (event) => {
   }
 };
 
+const validateBeforeCalculate = () => {
+  let validateState = true;
+
+  if(peopleAmountElement.value === "" || peopleAmountElement.value === "0"){
+    peopleAmountElement.classList.add("not-validated")
+    peopleAmountValidationElement.style.display = "block";
+    validateState = false;
+  }else{
+    peopleAmountElement.classList.remove("not-validated")
+    peopleAmountValidationElement.style.display = "none";
+  }
+
+
+  if(Number(billInputElement.value) <= 0){
+    billInputElement.classList.add("not-validated")
+    billAmountValidationElement.style.display = "block";
+    validateState = false;
+  }else{
+    billInputElement.classList.remove("not-validated")
+    billAmountValidationElement.style.display = "none";
+  }
+
+  return validateState
+}
+
+const updateTipAmount = (amount) => {
+  tipAmount = amount
+
+  document.querySelectorAll(".button-bill").forEach(element => {
+    if(Number(element.innerHTML.replace("%","")) === tipAmount){
+      element.classList.add("selected")
+    }else{
+      element.classList.remove("selected")
+    }
+  });
+}
+
+const updateCustomTipAmount = (amount) => {
+  console.log(amount)
+}
+
 const handleResetButton = () => {
   tipAmountElement.innerHTML = "$0.00";
   totalAmountElement.innerHTML = "$0.00";
+  tipAmount = 0
+  billInputElement.value = ""
+  peopleAmountElement.value = ""
+
+  document.querySelectorAll(".button-bill").forEach(element => {
+    element.classList.remove("selected")
+  })
 };
 
 const handleCalculateButton = () => {
 
-  if(peopleAmountElement.value === "" || peopleAmountElement.value === "0"){
-    peopleAmountValidationElement.style.display = "block";
-  }else{
-    peopleAmountValidationElement.style.display = "none";
+  if(!validateBeforeCalculate()){
+    return false;
   }
 
-  console.log(Number(billInputElement.innerHTML))
+  let numberPeople = Number(peopleAmountElement.value)
 
-  if(Number(billInputElement.innerHTML) <= 0){
-    billAmountValidationElement.style.display = "block";
-  }else{
-    billAmountValidationElement.style.display = "none";
-  }
+  let inputBill = Number(billInputElement.value)
+  let inputBillAdded = (inputBill * (100+tipAmount)) / 100
+
+  let diffInputBill = (inputBillAdded - inputBill) / numberPeople
+  tipAmountElement.innerHTML = `$${diffInputBill.toFixed(2)}`
+
+  let totalAmount = inputBillAdded / numberPeople
+  totalAmountElement.innerHTML = `$${totalAmount.toFixed(2)}`
 
 }
