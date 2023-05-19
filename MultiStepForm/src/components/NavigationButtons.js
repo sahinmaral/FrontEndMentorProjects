@@ -8,9 +8,9 @@ function NavigationButtons() {
 
   const currentStep = Object.values(steps).find((step) => step.path === location.pathname);
 
+
   return (
     <>
-      {!currentStep.prevPath && <div></div>}
       {currentStep.prevPath && (
         <Link to={currentStep.prevPath} className="go-back-button">
           <p>Go Back</p>

@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import PersonalInfoForm from "./pages/PersonalInfoForm";
 import PlanForm from "./pages/PlanForm";
@@ -7,8 +7,14 @@ import SummaryPage from "./pages/SummaryPage";
 import ConfirmPage from "./pages/ConfirmPage";
 import Sidebar from "./components/Sidebar";
 import NavigationButtons from "./components/NavigationButtons";
+import { steps } from "./models/constants";
 
 function App() {
+
+  const location = useLocation();
+
+  const currentStep = Object.values(steps).find((step) => step.path === location.pathname);
+
   return (
     <>
       <div className="left-side-mobile">
@@ -29,9 +35,10 @@ function App() {
         </div>
       </div>
 
-      <div className="navigation-buttons-mobile">
+      {currentStep && <div className="navigation-buttons-mobile">
           <NavigationButtons />
-      </div>
+      </div>}
+
     </>
   );
 }

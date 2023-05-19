@@ -22,6 +22,7 @@ body {
   position: fixed;
   display: flex;
   justify-content: space-between;
+  padding-right: 35px;
   left: 0px;
   right: 0px;
   bottom: 0;
@@ -30,6 +31,7 @@ body {
   padding-top:20px;
   padding-bottom: 20px;
   background-color: white;
+  visibility: hidden;
 }
 
 .navigation-buttons-mobile .next-step-button{
@@ -491,6 +493,10 @@ body {
 
   .plan-page .plan-options .option .option-description{
     margin:0 0 0 30px;
+  }
+
+  .navigation-buttons-mobile{
+    visibility: visible !important;
   }
 
 }
