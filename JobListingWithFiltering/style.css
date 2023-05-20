@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0fafb;
+  font-family: "League Spartan", sans-serif;
+}
+
+.tag {
+  color: #5dadae;
+  font-weight: 700;
+  background-color: #f0f6f6;
+  border-radius: 5px;
+  padding: 10px 15px 8px 15px;
+  margin: 5px;
+}
+
+.job-cards .tag:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background-color: #5da5a480;
+}
+
+.filter .tag {
+  margin-top: -10px;
+  margin-bottom: 0;
+  height: 15px;
+  padding-left: 20px;
+  padding-right: 0px;
+}
+
+.banner {
+  position: relative;
+}
+
+.banner img {
+  width: 100%;
+  background-color: #5da5a4;
+}
+
+.banner .filter {
+  display: none;
+  padding: 35px 20px 35px 20px;
+  justify-content: space-between;
+  position: absolute;
+  border-radius: 5px;
+  bottom: -20px;
+  top: auto;
+  left: 0;
+  right: 0;
+  width: auto;
+  height: 10px;
+  margin: -100px 100px 0 100px;
+  background-color: #ffffff;
+}
+
+.banner .filter .left {
+  display: flex;
+}
+
+.banner .filter .tag{
+    display: flex;
+}
+
+.banner .filter .tag .remove-tag{
+    height: 25px;
+    padding-left:10px;
+    padding-top:8px;
+    margin-left: 20px;
+    margin-top: -10px;
+}
+
+.banner .filter .tag .remove-tag:hover{
+    cursor: pointer;
+    background-color: #2e3a38;
+}
+
+.banner .filter .clear {
+  color: #2e3a38;
+}
+
+.banner .filter .clear:hover {
+  cursor: pointer;
+  color: #5da5a4;
+  text-decoration: underline;
+}
+
+.container {
+  margin: 70px 100px 0 100px;
+}
+
+.job-cards {
+  background-color: #ffffff;
+  width: auto;
+  height: 135px;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  padding: 30px 40px 0 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 15px 30px 0px rgba(93, 165, 164, 0.5);
+  -moz-box-shadow: 0px 15px 30px 0px rgba(93, 165, 164, 0.5);
+  box-shadow: 0px 15px 30px 0px rgba(93, 165, 164, 0.5);
+}
+
+.job-cards.new-job {
+  border-left: 5px solid #5fa0a0;
+}
+
+.job-cards .left,
+.job-cards .body-top,
+.job-cards .features {
+  display: flex;
+}
+
+.job-cards .tags {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.job-cards .body-top,
+.job-cards .title {
+  margin-bottom: 17px;
+}
+
+.job-cards .features .feature {
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 5px 10px 3px 10px;
+  margin: 0 3px;
+}
+
+#feature-new {
+  background-color: #5fa29f;
+}
+
+#feature-featured {
+  background-color: #2e3a38;
+}
+
+.job-cards .company-name {
+  color: #62a39f;
+  font-size: 18px;
+  margin-right: 20px;
+  padding-top: 2px;
+}
+
+.job-cards .title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #2e3a38;
+}
+
+.job-cards .title:hover {
+  cursor: pointer;
+  color: #57a6a1;
+}
+
+.job-cards .description {
+  color: #a7adb0;
+  font-size: 16px;
+  margin-left: -5px;
+}
+
+.job-cards .description span {
+  margin: 0px 5px;
+}
+
+.job-cards .thumbnail {
+  margin-right: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+  .job-cards .tags {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .job-cards .tags {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .job-cards {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .container {
+    margin: 70px 25px 0 25px;
+  }
+
+  .banner .filter {
+    margin: -100px 25px 0 25px;
+  }
+
+  .job-cards {
+    flex-direction: column;
+    height: 200px;
+  }
+
+  .job-cards .middle {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .job-cards .tags {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .banner img {
+    height: 156px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .job-cards {
+    margin: 50px 0;
+    height: 250px;
+  }
+
+  .job-cards .left {
+    flex-direction: column;
+  }
+
+  .job-cards .thumbnail {
+    margin-top: -60px;
+    margin-bottom: 20px;
+  }
+
+  .job-cards .thumbnail img {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .job-cards {
+    height: 270px;
+  }
+
+  .job-cards .tags {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
