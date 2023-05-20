@@ -104,8 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (element.new) {
         let newFeature = document.createElement("div");
-        newFeature.classList.add("feature");
-        newFeature.id = "feature-new";
+        newFeature.classList.add("feature","feature-new");
         newFeature.innerHTML = "NEW!";
 
         features.appendChild(newFeature);
@@ -115,8 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
         jobCards.classList.add("new-job");
 
         let featuredFeature = document.createElement("div");
-        featuredFeature.classList.add("feature");
-        featuredFeature.id = "feature-featured";
+        featuredFeature.classList.add("feature","feature-featured");
         featuredFeature.innerHTML = "FEATURED";
 
         features.appendChild(featuredFeature);

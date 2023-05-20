@@ -130,11 +130,11 @@ body {
   margin: 0 3px;
 }
 
-#feature-new {
+.feature-new {
   background-color: #5fa29f;
 }
 
-#feature-featured {
+.feature-featured {
   background-color: #2e3a38;
 }
 
