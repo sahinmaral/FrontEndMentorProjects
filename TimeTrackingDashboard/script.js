@@ -95,7 +95,7 @@ const loadElements = (result) => {
     footerElement.classList.add("footer");
 
     const footerSpanElement = document.createElement("span");
-    footerElement.innerHTML = `Last week - ${element.timeframes[selectedReportState].previous}`;
+    footerElement.innerHTML = `Last week - ${element.timeframes[selectedReportState].previous}hrs`;
 
     footerElement.appendChild(footerSpanElement);
 
