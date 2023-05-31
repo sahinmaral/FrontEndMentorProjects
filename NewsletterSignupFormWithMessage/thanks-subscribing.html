@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+
+    <link rel="stylesheet" href="./thanks-subscribing.css" />
+  </head>
+  <body>
+    <div class="newsletter">
+      <img src="./assets/images/icon-success.svg" />
+      <h1 class="header">Thanks for subscribing!</h1>
+      <p class="content"></p>
+      <button>Dismiss message</button>
+    </div>
+
+    <script>
+      const email = localStorage.getItem("email-address");
+
+      if (email === null) {
+        location.href = "./index.html";
+      } else {
+        const contentText = document.querySelector(".newsletter .content");
+        contentText.innerHTML = `A confirmation email has been sent to <b>${email}</b>. Please open
+        it and click the button inside to confirm your subscription.`;
+        localStorage.removeItem("email-address");
+      }
+    </script>
+  </body>
+</html>

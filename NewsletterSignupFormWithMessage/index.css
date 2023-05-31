@@ -1,0 +1,191 @@
+@font-face {
+  font-family: robotoRegular;
+  src: url("./assets/fonts/Roboto-Regular.ttf");
+}
+
+@font-face {
+  font-family: robotoBold;
+  src: url("./assets/fonts/Roboto-Bold.ttf");
+  font-weight: bold;
+}
+
+* {
+    box-sizing:border-box;
+ }
+
+:root {
+  /* Colors */
+  --tomato: hsl(4, 100%, 67%);
+  --dark-slate-grey: hsl(234, 29%, 20%);
+  --charcoal-grey: hsl(235, 18%, 26%);
+  --grey: rgba(146, 148, 160, 0.3);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--charcoal-grey);
+  display: flex;
+  justify-content: center;
+  margin:0;
+  padding:0;
+}
+
+p {
+  font-size: 16px;
+}
+
+.newsletter {
+  margin-top: 100px;
+  width: fit-content;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: 30px;
+}
+
+.newsletter .left {
+  padding: 45px;
+}
+
+.newsletter .left > .header {
+  font-family: "robotoBold", sans-serif;
+  font-size: 3em;
+  color: var(--charcoal-grey);
+  margin-bottom: 0;
+}
+
+.newsletter .features {
+  font-family: "robotoRegular", sans-serif;
+  margin-bottom: 3em;
+}
+
+.newsletter .features .list {
+  list-style-type: none;
+}
+
+.newsletter .features .list {
+  padding: 0;
+}
+
+.newsletter .features .list li {
+  display: flex;
+}
+
+.newsletter .features .list .list-text {
+  padding-left: 1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.newsletter .form-control-email .form-control-email-top {
+  font-family: "robotoBold";
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  padding-bottom: 1em;
+}
+
+.newsletter .form-control-email .form-control-email-top .validation{
+    color:var(--tomato);
+}
+
+.newsletter .form-control-email input {
+  display: block;
+  width: 100%;
+  border-color: var(--grey);
+  border-width: 0.05em;
+  border-radius: 8px;
+  padding: 17px 0 17px 15px;
+  margin-bottom: 20px;
+}
+
+.newsletter .form-control-email input::placeholder {
+  color: var(--grey);
+  opacity: 1;
+}
+
+.newsletter .form-control-email input:-ms-input-placeholder {
+  color: var(--grey);
+}
+
+.newsletter .form-control-email input::-ms-input-placeholder {
+  color: var(--grey);
+}
+
+.newsletter .form-control-email input:hover {
+  cursor: pointer;
+}
+
+.newsletter .form-control-email input:focus{
+    border-color:blue !important;
+}
+
+.newsletter .form-control-email button {
+  width: 100%;
+  background-color: var(--dark-slate-grey);
+  color: var(--white);
+  font-family: "robotoBold";
+  padding: 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 0px;
+}
+
+.newsletter .form-control-email button:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 106, 58, 1) 0%,
+    rgba(255, 82, 123, 1) 100%
+  );
+}
+
+.newsletter .right{
+    width: 400px;
+    height: 593px;
+    border-radius: 20px;
+    background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+}
+
+
+@media screen and (max-width:768px) {
+    .newsletter{
+        flex-direction: column-reverse;
+        border-radius: 0;
+        padding:0;
+        margin-top: 50px;
+    }
+
+    .newsletter .left{
+        padding-top:0;
+    }
+
+    .newsletter .left>.header{
+        font-size:2.5em;
+    }
+
+    .newsletter .right{
+        width: 100%;
+        background-size: cover;
+        height: 284px;
+        border-radius: 0 0 20px 20px;
+        background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    }
+}
+
+@media screen and (max-width:425px){
+    body{
+        background-color: var(--white);
+    }
+
+    .newsletter{
+        margin-top:0px;
+    }
+
+    .newsletter .left{
+        padding-left:20px;
+        padding-right: 20px;
+    }
+
+}
