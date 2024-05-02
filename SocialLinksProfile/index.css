@@ -1,0 +1,127 @@
+:root {
+  --off-black: hsl(0, 0%, 8%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%);
+  --green: hsl(75, 94%, 57%);
+
+  --size-normal: 14px;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/static/Inter-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt,wght.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+}
+body {
+  background-color: var(--off-black);
+}
+
+h1,
+h2,
+h3,
+p,
+a {
+  color: var(--white);
+  font-family: "Inter", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 400px;
+  background-color: var(--dark-grey);
+  border-radius: 10px;
+  padding: 35px 0px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card .card-image {
+  display: flex;
+  justify-content: center;
+}
+
+.card .card-image img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+}
+
+.card .card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.card #name {
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.card #address {
+  font-weight: 600;
+  color: var(--green);
+}
+
+.card #profession {
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.card .card-social-media-accounts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.card-social-media-accounts a {
+  background-color: var(--grey);
+  width: 80%;
+  padding: 20px 10px;
+  border-radius: 5px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+}
+
+.card-social-media-accounts a:hover {
+  background-color: var(--green);
+  color:var(--dark-grey)
+}
+
+@media screen and (max-width: 425px) {
+  .card{
+    width: 375px;
+  }
+}
